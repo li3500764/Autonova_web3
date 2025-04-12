@@ -1,26 +1,93 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-gray-50 text-gray-900;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+rk-modal-root {
+  max-width: 400px !important;
+  margin: 0 auto !important;
+  top: 20% !important;
+}
+
+rk-modal-dialog {
+  @apply bg-gray-800 rounded-xl shadow-xl !important;
+}
+
+rk-connect-button {
+  @apply bg-purple-500 hover:bg-purple-600 text-white !important;
+}
+
+/* 添加霓虹文字效果 */
+.neon-text {
+  text-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
+}
+
+/* 全局滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  background: linear-gradient(
+    to bottom,
+    rgba(31, 41, 55, 0.2) 0%,
+    rgba(55, 65, 81, 0.1) 50%,
+    rgba(31, 41, 55, 0.2) 100%
+  );
+  border-radius: 10px;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    rgba(139, 92, 246, 0.8) 0%,
+    rgba(59, 130, 246, 0.8) 100%
+  );
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 滚动条滑块悬停效果 */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(139, 92, 246, 1) 0%,
+    rgba(59, 130, 246, 1) 100%
+  );
+}
+
+/* 特殊容器的滚动条（如提案内容区域） */
+.scrollbar-tech::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-tech::-webkit-scrollbar-track {
+  background: rgba(17, 24, 39, 0.3);
+}
+.scrollbar-tech::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    rgba(139, 92, 246, 0.6) 0%,
+    rgba(99, 102, 241, 0.6) 100%
+  );
+  border-radius: 3px;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
