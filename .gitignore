@@ -1,0 +1,41 @@
+# ================================
+# 通用忽略规则
+# ================================
+.DS_Store
+*.log
+*.tmp
+*.bak
+*.swp
+.idea/
+.vscode/
+node_modules/
+dist/
+build/
+.cache/
+.out/
+.next/
+
+# 环境变量文件（必须忽略！）
+# ================================
+.env*.local
+.env
+.env.development
+.env.production
+.env.test
+!.env.example
+
+# 私钥和敏感文件（Web3 特别重要！）
+# ================================
+/*.pem
+/*.key
+/secrets/
+/artifacts/
+/deployments/
+/coverage/
+
+# 依赖和包管理
+# ================================
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bower_components/
