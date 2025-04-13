@@ -7,7 +7,8 @@ const nextConfig: NextConfig = {
     optimizePackageImports: [
       '@tailwindcss/postcss'
     ]
-  }
+  },
+  output: 'export'
 };
 
 export default nextConfig;

@@ -50,7 +50,7 @@ export default function FundModal({
           </button>
 
           <h2 className="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 mb-6">
-            社区公共基金
+            Community public fund
           </h2>
           
           {/* 货币符号设计 */}
@@ -65,7 +65,7 @@ export default function FundModal({
           
           {/* 余额显示 */}
           <div className="text-center mb-8">
-            <p className="text-gray-400 mb-1">当前可用余额</p>
+            <p className="text-gray-400 mb-1">Current available balance</p>
             <p className="text-4xl font-mono text-blue-300">
               {balance} <span className="text-purple-300">ETH</span>
             </p>
@@ -81,7 +81,7 @@ export default function FundModal({
                 }}
                 className="w-full py-3 bg-gradient-to-r from-purple-600/80 to-blue-600/80 text-white rounded-lg hover:from-purple-500 hover:to-blue-500 transition-all shadow-lg"
               >
-                提取资金
+                Withdraw funds
               </button>
             </div>
           )}

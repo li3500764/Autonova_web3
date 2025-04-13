@@ -5,8 +5,8 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <>
       <Head>
-        <title>DAO 提案系统</title>
-        <meta name="description" content="去中心化自治组织提案平台" />
+        <title>DAO Proposal System</title>
+        <meta name="description" content="Decentralized Autonomous Organization Proposal Platform" />
       </Head>
       <div className="min-h-screen gradient-bg">
         <main className="container mx-auto px-4 py-8">
