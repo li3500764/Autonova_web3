@@ -320,8 +320,8 @@ export default function Home() {
                         className="absolute right-0 bottom-0 flex items-center justify-center w-6 h-6 bg-gray-800/50 rounded-full hover:bg-gray-700 transition-colors"
                         aria-label={
                           expandedProposals[proposal.id]
-                            ? "收起内容"
-                            : "展开内容"
+                            ? "Collapse content"
+                            : "Expand content"
                         }
                       >
                         <ChevronDownIcon
