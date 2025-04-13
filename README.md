@@ -25,8 +25,3 @@ The project consists of two main components:
      - Fund management module
 
 ✨ Coming soon: Full open-source release!
-
-## Try it Out
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/your-repo)
-*Live demo available on Sepolia testnet*
